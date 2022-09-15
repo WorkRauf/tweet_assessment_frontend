@@ -21,7 +21,7 @@ const Tweet = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/tweets")
+      .get("http://localhost:4000/api/tweets")
       .then((res) => {
         setTweets(res.data);
       })
@@ -80,7 +80,7 @@ const Tweet = () => {
   };
   const addTweet = () => {
     axios
-      .post("http://localhost:3000/api/tweet", values)
+      .post("http://localhost:4000/api/tweet", values)
       .then((response) => {
         resetForm();
         toast("Tweet post successfully");
